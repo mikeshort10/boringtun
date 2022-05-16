@@ -1,0 +1,5 @@
+project: borington
+target: check-tun-name
+
+cmds:
+  - cmd: boringtun/fuzz/target/x86_64-apple-darwin/release/fuzz_target_1
