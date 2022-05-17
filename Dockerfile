@@ -19,9 +19,8 @@ WORKDIR /boringtun/boringtun
 # Configure Rust and build fuzz file
 RUN rustup default nightly
 RUN cargo install cargo-fuzz
-RUN cargo fuzz build --target x86_64-unknown-linux-gnu fuzz_target_1
+RUN cargo fuzz build --target x86_64-unknown-linux-gnu fuzz_target_2
 
 # Package Stage
 FROM --platform=linux/amd64 ubuntu:20.04
 COPY --from=builder /boringtun/ /
-
