@@ -19,12 +19,6 @@ path = ".."
 members = ["."]
 
 [[bin]]
-name = "check_tun_name"
-path = "fuzz_targets/check_tun_name.rs"
-test = false
-doc = false
-
-[[bin]]
 name = "new_mac"
 path = "fuzz_targets/new_mac.rs"
 test = false
