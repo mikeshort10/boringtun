@@ -56,12 +56,12 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
-      - name: Start analysis for check_tun_name
-        uses: ForAllSecure/mcode-action@v1
-        with:
-          mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ${{ steps.meta.outputs.tags }} --duration 300 --file ${{ env.CHECK_TUN_NAME }}
-          sarif-output: sarif
+      #- name: Start analysis for check_tun_name
+      #  uses: ForAllSecure/mcode-action@v1
+      #  with:
+      #    mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
+      #    args: --image ${{ steps.meta.outputs.tags }} --duration 300 --file ${{ env.CHECK_TUN_NAME }}
+      #    sarif-output: sarif
 
       - name: Start analysis for new_mac
         uses: ForAllSecure/mcode-action@v1
