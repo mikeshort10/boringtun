@@ -1,0 +1,6 @@
+project: boringtun
+target: check_tun_name
+
+cmds:
+  - cmd: /check_tun_name
+
