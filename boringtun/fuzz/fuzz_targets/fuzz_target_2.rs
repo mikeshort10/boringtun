@@ -1,7 +1,8 @@
 #![no_main]
 use libfuzzer_sys::fuzz_target;
-use boringtun::crypto::Blake2s;
+use boringtun::device;
+use std::str;
 
 fuzz_target!(|data: &[u8]| {
-    Blake2s::new_mac(&data);
+    device::DeviceHandle::new(str::from_utf8(&data).unwrap(), device::DeviceConfig::default()).unwrap();
 });
