@@ -1,8 +1,7 @@
 #![no_main]
 use libfuzzer_sys::fuzz_target;
-use boringtun::device::tun::TunSocket;
-use std::str;
+use boringtun::noise::Tunn;
 
 fuzz_target!(|data: &[u8]| {
-    TunSocket::new(str::from_utf8(&data).unwrap());
+    Tunn::dst_address(data);
 });
